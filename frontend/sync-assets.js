@@ -125,12 +125,6 @@ function downloadMiningPoolLogos$() {
             if (verbose) {
               console.log(`${LOG_TAG} Processing ${poolLogo.name}`);
             }
-            if (poolLogo.type !== 'file' || !poolLogo.download_url) {
-              if (verbose) {
-                console.log(`${LOG_TAG} \t\tSkipping ${poolLogo.name}: unsupported entry type ${poolLogo.type}`);
-              }
-              continue;
-            }
             console.log(`${ASSETS_PATH}/mining-pools/${poolLogo.name}`);
             const filePath = `${ASSETS_PATH}/mining-pools/${poolLogo.name}`;
             if (fs.existsSync(filePath)) {
